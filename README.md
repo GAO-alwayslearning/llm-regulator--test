@@ -29,7 +29,7 @@ regulatory question Moonshot AI will face when deploying Kimi in Europe.
 - **The insight**: As a BD person, this is exactly the kind of friction 
   that kills developer adoption. If I'm a hobbyist developer in Korea 
   testing Kimi for the first time, and I hit a wall before my first 
-  successful API call, I might switch to DeepSeek or Qwen instead.
+  successful API call, in this case, I might not switch to these new models at all.
 - **The suggestion**: Kimi's developer onboarding could benefit from 
   clearer credit alerts, a more generous free tier for new accounts, 
   and explicit key format guidance.
