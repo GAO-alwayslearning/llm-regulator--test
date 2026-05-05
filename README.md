@@ -1,8 +1,7 @@
 # llm-regulator--test
 # My large language model API Test for ai regulator: Compliance & Cross-Culture Perspective
 
-## Why I did this (the honest version)
-I'm a public policy grad turned entrepreneur turned AI BD aspirant. 
+## Why I did this
 My first exposure to US-China tech tension was during a consulting project 
 where I had to map OFAC/EAR regulatory traps for a Chinese tech giant back in 2020. 
 That experience taught me: compliance isn't a checkbox, it's a competitive moat.
@@ -23,12 +22,17 @@ the actual provisions that determine whether an AI system is "high-risk"
 in the EU market. This isn't a hypothetical scenario; it's the exact 
 regulatory question Moonshot AI will face when deploying Kimi in Europe.
 
-## What I learned (so far)
-- K2.6 handles code-switching (Chinese-English) smoothly — important for 
-  multilingual compliance docs in Asia/Middle East markets
-- Its interpretation of "high-risk system" under EU AI Act aligns with 
-  my own reading: MIT-licensed GPAI models likely fall under transparency 
-  obligations, not high-risk classification (but I'm not a lawyer — yet)
+## What went wrong (and what I learned)
+- **The friction**: My first API call failed due to insufficient balance. 
+  After obtaining a new key, I encountered an "Invalid Authentication" error, 
+  suggesting onboarding complexity for first-time developers.
+- **The insight**: As a BD person, this is exactly the kind of friction 
+  that kills developer adoption. If I'm a hobbyist developer in Korea 
+  testing Kimi for the first time, and I hit a wall before my first 
+  successful API call, I might switch to DeepSeek or Qwen instead.
+- **The suggestion**: Kimi's developer onboarding could benefit from 
+  clearer credit alerts, a more generous free tier for new accounts, 
+  and explicit key format guidance.
 
 ## What I still don't know
 - How does K2.6 perform on Arabic compliance text? 
@@ -41,7 +45,6 @@ regulatory question Moonshot AI will face when deploying Kimi in Europe.
 2. Replace key in `test_kimi.py`
 3. Run: `python test_kimi.py`
 
-## Who I am (in case you're wondering)
-Not an engineer. Not a lawyer. Just someone who believes the best way to 
-sell a technical product is to understand its edges — where it works, 
+## Who I am
+I'm a public policy grad turned entrepreneur turned AI BD aspirant. Not an engineer. Not a lawyer. Just someone who believes the best way to sell a technical product is to understand its edges — where it works, 
 where it breaks, and where the regulator might ask uncomfortable questions.
