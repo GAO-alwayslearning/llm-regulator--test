@@ -1,0 +1,29 @@
+from openai import OpenAI
+
+client = OpenAI(
+    api_key="sk-oW34aADAPj2XJYxL9TDbdaGaRXXZKlYLRwi1XrAtUJ9vf5R3",
+    base_url="https://api.moonshot.cn/v1"
+)
+
+# 真实合规场景测试：EU AI Act Article 52 对开源大模型的适用性
+compliance_text = """
+EU AI Act Article 52(1) requires providers of high-risk AI systems to:
+(a) ensure that the AI system enables the effective supervision by natural persons;
+(b) provide the deployer with instructions for use;
+(c) enable the deployer to interpret the system's output and use it appropriately.
+
+同时，根据Article 52(3)，如果AI系统被用于生物识别、关键基础设施、
+教育评分、就业招聘等场景，则必须被归类为"high-risk"。
+请分析：一个采用MIT开源协议、训练数据包含公开网络信息的大语言模型（如Kimi K2.6），
+在欧盟市场部署时，是否自动触发Article 52的高风险义务？
+"""
+
+response = client.chat.completions.create(
+    model="kimi-k2-6",
+    messages=[
+        {"role": "user", "content": compliance_text}
+    ]
+)
+
+print("=== Kimi K2.6 合规分析结果 ===")
+print(response.choices[0].message.content)
